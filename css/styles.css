@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa; /* cor de fundo suave */
+    background-color: #f8f9fa;
 }
 
 h2, .card-title {
@@ -22,19 +22,6 @@ p {
     height: 200px;
 }
 
-header, footer {
-    background-color: #f8f9fa;
-}
-
-footer a {
-    color: #1B09B0;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
 /* Navbar custom */
 .navbar {
     padding: 1rem 0;
@@ -42,13 +29,47 @@ footer a:hover {
 
 .navbar-brand {
     font-size: 1.8rem;
+    color: #1B09B0;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #0d057f;
 }
 
 .nav-link {
     font-size: 1rem;
     margin-left: 1rem;
+    position: relative;
+    color: #1B09B0;
+    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
+    color: #0d057f;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background-color: #0d057f;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Footer links */
+footer a {
+    color: #1B09B0;
+    text-decoration: none;
+}
+
+footer a:hover {
     text-decoration: underline;
 }
